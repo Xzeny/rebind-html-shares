@@ -6,9 +6,10 @@ Public review copies of Rebind marketing HTML files.
 
 ## What's here
 
+- [Script landing pages v2.1: community script hub (23 scripts + Break Buddy 1.3.0, Port Janitor 1.4.2)](script-lps-v2-1-gallery.html) — hub, Graphics, Video, CAD, Music, plus Break Buddy 1.3.0 and Port Janitor 1.4.2 (coming soon; Port Janitor QA pending)
 - [Advertorial LPs v2.1.1 gallery](advertorial-lps-v2-1-1-gallery.html) — latest 12 sponsored landing pages, desktop (1440) and mobile (390) side by side (Content & Copy re-check passed; 01 and 04 still need Dean's test)
 - [iCUE compare-page fix](compare-vendor-software-icue-fix-v1.html) — approved wording, ready for the site owner
-- [Script landing pages v1.2 (Break Buddy, Port Janitor; community scripts)](script-lps-v1-gallery.html) — Break Buddy and Port Janitor landing pages (coming soon)
+- [Script landing pages v1.2 (Break Buddy, Port Janitor; community scripts) · superseded](script-lps-v1-gallery.html) — previous script gallery, kept for comparison
 - [Competitor reference v1.2 (public-safe edition)](competitor-reference-v1.html) — internal-only rows removed
 - [Advertorial LP set v2.1 gallery](advertorial-lps-v2-1-gallery.html) — previous set, superseded, kept for comparison
 - [Advertorial LP set v2 gallery](advertorial-lps-v2-gallery.html) — earlier set, kept for comparison
