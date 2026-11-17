@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>TechPowerUp media kit: breakdown for Rebind</title>
+<style>
+:root{
+  --ink:#141414;
+  --bg:#fbfaf7;
+  --t2:#4a4a4a;
+  --accent:#b0342c;
+  --line:#c9c6bf;
+  --paper:#fff;
+  --mono:ui-monospace,Menlo,Consolas,monospace;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --serif:Georgia,"Times New Roman",serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 var(--sans)}
+a{color:var(--ink)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+button,select,input{font:inherit;color:inherit}
+.lockup{display:inline-flex;align-items:center;gap:8px}
+.lockup svg{width:14px;height:19px}
+.wm{font:700 16px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase}
+.bar{background:var(--ink);color:#fff;font:700 13px/1.4 var(--mono);letter-spacing:.05em;padding:8px 16px}
+.chrome{border-bottom:2px solid var(--ink);background:var(--bg);position:sticky;top:0;z-index:5}
+.chrome-inner{max-width:920px;margin:0 auto;padding:12px 20px 14px;display:flex;flex-wrap:wrap;gap:12px 20px;align-items:flex-end;justify-content:space-between}
+.chrome h1{font:700 1.45rem/1.25 var(--serif);margin:6px 0 0}
+.meta{font-size:14px;color:var(--t2);margin:4px 0 0;max-width:70ch}
+.flag{border:2px solid var(--accent);padding:8px 10px;font-size:14px;margin:0 0 22px;background:var(--paper)}
+.wrap{max-width:920px;margin:0 auto;padding:18px 20px 64px}
+nav.toc{border:2px solid var(--ink);background:var(--paper);padding:16px 20px;margin:0 0 28px}
+nav.toc h2{font:700 12.5px/1.3 var(--mono);letter-spacing:.06em;text-transform:uppercase;margin:0 0 10px}
+nav.toc ol{margin:0;padding-left:1.2em}
+nav.toc li{margin:0 0 4px}
+nav.toc a{text-decoration:underline;text-underline-offset:2px}
+h2{font:700 1.35rem/1.25 var(--serif);margin:36px 0 12px}
+h3{font:700 1.05rem/1.3 var(--serif);margin:24px 0 10px}
+p{margin:0 0 12px;max-width:70ch}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin:16px 0 18px}
+.stat{border:2px solid var(--ink);background:var(--paper);padding:12px}
+.stat b{display:block;font:700 1.25rem/1.2 var(--mono)}
+.stat span{display:block;font-size:13px;color:var(--t2);margin-top:4px}
+.stat .detail{font:700 11.5px/1.2 var(--mono);letter-spacing:.05em;text-transform:uppercase;color:var(--t2);margin-top:6px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:16px 0 8px}
+@media (max-width:720px){.split{grid-template-columns:1fr}}
+.card{border:2px solid var(--ink);background:var(--paper);padding:16px}
+.pie{width:160px;height:160px;border-radius:50%;margin:8px 0 12px;border:2px solid var(--ink)}
+.legend{list-style:none;padding:0;margin:0}
+.legend li{display:flex;gap:8px;align-items:center;margin:0 0 6px;font-size:14px}
+.swatch{width:12px;height:12px;border:1px solid var(--ink);flex:0 0 auto}
+.rows{border:2px solid var(--ink);background:var(--paper);margin:12px 0 16px}
+.row{display:flex;flex-wrap:wrap;gap:6px 16px;justify-content:space-between;align-items:baseline;padding:10px 12px;border-top:1px solid var(--line)}
+.row:first-child{border-top:0}
+.row .title{font-weight:700}
+.row .detail{color:var(--t2);font-size:14px}
+.row .meta{font:700 14px/1.3 var(--mono)}
+.table-wrap{overflow-x:auto;margin:12px 0 16px;border:2px solid var(--ink);background:var(--paper)}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{border-bottom:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
+th{font:700 11.5px/1.3 var(--mono);letter-spacing:.06em;text-transform:uppercase;background:#f3f0e8}
+tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+tr.emphasis{background:#f7efe8}
+.calc{border:2px solid var(--ink);background:var(--paper);padding:16px;margin:12px 0 16px}
+.controls{display:flex;flex-wrap:wrap;gap:14px 20px;align-items:flex-end;margin:12px 0 16px}
+label.field{display:flex;flex-direction:column;gap:6px;font:700 12.5px/1.3 var(--mono);letter-spacing:.05em;text-transform:uppercase}
+select,input[type="checkbox"]{accent-color:var(--ink)}
+select{border:2px solid var(--ink);background:var(--paper);padding:8px 10px;min-width:10rem}
+.seg{display:inline-flex;flex-wrap:wrap;border:2px solid var(--ink);background:var(--paper)}
+.seg button{padding:8px 12px;font:700 12.5px/1.2 var(--mono);letter-spacing:.04em;text-transform:uppercase;background:transparent;border:0;border-right:2px solid var(--ink);cursor:pointer}
+.seg button:last-child{border-right:0}
+.seg button[aria-pressed="true"]{background:var(--ink);color:#fff}
+.toggle{display:flex;align-items:center;gap:8px;font:700 12.5px/1.3 var(--mono);letter-spacing:.05em;text-transform:uppercase;cursor:pointer}
+.formula{font:16px/1.5 var(--serif);border-left:2px solid var(--ink);padding:8px 0 8px 14px;margin:8px 0 16px;max-width:70ch}
+.results{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px}
+.result{border:1px solid var(--line);padding:10px 12px}
+.result .k{font:700 11.5px/1.3 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--t2)}
+.result .v{font:700 1.2rem/1.3 var(--mono);margin-top:4px}
+ol,ul{max-width:70ch}
+.source{font-size:13px;color:var(--t2);margin-top:36px;max-width:80ch}
+.back{margin-top:28px}
+.back a{font:700 12.5px/1.3 var(--mono);letter-spacing:.05em;text-transform:uppercase}
+</style>
+</head>
+<body>
+<section class="bar" aria-label="Draft status">DRAFT FOR REVIEW, NOT A LIVE CAMPAIGN · files for sharing only · ads on HOLD</section>
+<header class="chrome">
+  <div class="chrome-inner">
+    <div>
+      <p><span class="lockup"><svg aria-hidden="true" focusable="false" fill="currentColor" shape-rendering="crispEdges" viewBox="0 0 360 490"><rect width="100" height="100"/><rect width="100" height="100" y="130"/><rect width="100" height="100" y="260"/><rect width="100" height="100" y="390"/><rect width="100" height="100" x="130"/><rect width="100" height="100" x="260"/></svg><span class="wm">Rebind</span></span></p>
+      <h1>TechPowerUp media kit: breakdown for Rebind</h1>
+      <p class="meta">Audience, pricing, and a banner calculator from TechPowerUp’s pub26 media kit, plus a first-test recommendation for Rebind. Ads stay on HOLD until Dean lifts that hold.</p>
+    </div>
+  </div>
+</header>
+<main class="wrap">
+  <p class="flag"><strong>Ads are on HOLD.</strong> These are kit rates for planning only. No placement is booked, and nothing here authorizes spend until Dean lifts the ad hold in his own words.</p>
+
+  <nav class="toc" aria-label="Contents">
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#audience">Audience</a>
+        <ol>
+          <li><a href="#region">Region split</a></li>
+          <li><a href="#age">Age split</a></li>
+          <li><a href="#buyers">Buyer traits</a></li>
+        </ol>
+      </li>
+      <li><a href="#offers">Offers and terms</a>
+        <ol>
+          <li><a href="#cpm">Banner CPM matrix</a></li>
+        </ol>
+      </li>
+      <li><a href="#calculator">Banner calculator</a></li>
+      <li><a href="#recommendation">Recommendation for Rebind</a></li>
+      <li><a href="#claims">Claim limits</a></li>
+    </ol>
+  </nav>
+
+  <section id="audience">
+    <h2>Audience</h2>
+    <p>Figures below are as published in TechPowerUp’s pub26 media kit for this hardware news and review site, founded in May 2004.</p>
+    <div class="stats">
+      <div class="stat"><b>4.5M</b><span>Monthly unique visitors</span><div class="detail">Up to</div></div>
+      <div class="stat"><b>45M</b><span>Monthly page views</span><div class="detail">Up to</div></div>
+      <div class="stat"><b>150,000</b><span>Unique visitors a day</span><div class="detail">Over</div></div>
+      <div class="stat"><b>#7,933</b><span>SimilarWeb global rank</span><div class="detail">January 2026</div></div>
+      <div class="stat"><b>161,000</b><span>Social followers</span><div class="detail">Over, combined channels</div></div>
+      <div class="stat"><b>139,000+</b><span>Forum members</span></div>
+    </div>
+    <p>The kit also lists 5.4 million+ forum posts and over 500,000 downloads a month from the software archive, including GPU-Z, ThrottleStop, NVCleanstall, and MemTest64, and names the archive as an official download source for NVIDIA, AMD, and Intel GPU drivers.</p>
+
+    <div class="split">
+      <section class="card" id="region">
+        <h3>Region split</h3>
+        <div class="pie" style="background:conic-gradient(#1f4e79 0 30%, #c4a35a 30% 70%, #3d7a6a 70% 100%)" role="img" aria-label="Americas 30 percent, EMEA 40 percent, Asia-Pacific 30 percent"></div>
+        <ul class="legend">
+          <li><span class="swatch" style="background:#1f4e79"></span>Americas, 30%</li>
+          <li><span class="swatch" style="background:#c4a35a"></span>EMEA, 40%</li>
+          <li><span class="swatch" style="background:#3d7a6a"></span>Asia-Pacific, 30%</li>
+        </ul>
+        <p>US readers are 21% of the total audience, counted inside the Americas share. The kit’s pie further splits the Asia-Pacific share into Asia Pacific 19%, China 4%, and CIS 7%.</p>
+      </section>
+      <section class="card" id="age">
+        <h3>Age split</h3>
+        <div class="pie" style="background:conic-gradient(#1f4e79 0 42%, #c4a35a 42% 73%, #3d7a6a 73% 100%)" role="img" aria-label="Ages 20 to 40, 42 percent; over 40, 31 percent; under 20, 27 percent"></div>
+        <ul class="legend">
+          <li><span class="swatch" style="background:#1f4e79"></span>20–40, 42%</li>
+          <li><span class="swatch" style="background:#c4a35a"></span>Over 40, 31%</li>
+          <li><span class="swatch" style="background:#3d7a6a"></span>Under 20, 27%</li>
+        </ul>
+      </section>
+    </div>
+
+    <section id="buyers">
+      <h3>Buyer traits</h3>
+      <div class="rows">
+        <div class="row"><span class="title">Buy hardware online</span><span class="meta">87%</span></div>
+        <div class="row"><span class="title">Overclock their components</span><span class="meta">56%</span></div>
+        <div class="row"><span class="title">Purchase new hardware</span><span class="detail">Mostly online</span><span class="meta">Every five months</span></div>
+      </div>
+      <div class="card">
+        <div class="pie" style="background:conic-gradient(#1f4e79 0 80%, #c4a35a 80% 93%, #3d7a6a 93% 100%)" role="img" aria-label="Buy online 80 percent, buy in-store 13 percent, check out in-store then buy online 7 percent"></div>
+        <ul class="legend">
+          <li><span class="swatch" style="background:#1f4e79"></span>Buy online, 80%</li>
+          <li><span class="swatch" style="background:#c4a35a"></span>Buy in-store, 13%</li>
+          <li><span class="swatch" style="background:#3d7a6a"></span>Check out in-store, then buy online, 7%</li>
+        </ul>
+        <p>The 87% who buy hardware online is the 80% who buy online plus the 7% who check out in-store and then buy online.</p>
+      </div>
+    </section>
+  </section>
+
+  <section id="offers">
+    <h2>Offers and terms</h2>
+    <p>Prices and terms are from the kit. Fit for Rebind is a planning read, not a TechPowerUp claim.</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Offer</th>
+            <th>Price</th>
+            <th>Terms</th>
+            <th>Fit for Rebind</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Banners</td>
+            <td>CPM by budget and term, see matrix</td>
+            <td>728×90 and/or 300×250; global organic traffic; geo-targeting possible; billed quarterly, NET30; Q4 +25% premium, waived at 12 months or longer</td>
+            <td>Cheap reach, weaker fit than a news post</td>
+          </tr>
+          <tr class="emphasis">
+            <td>Sponsored news post</td>
+            <td>$1,000, or $1,500 on special days such as Black Friday, Cyber Monday, Boxing Day, and Prime Day</td>
+            <td>Price is firm, billed in advance, NET7; up to 1,000 words with dofollow links; labeled Sponsored or Deal; anchored in the top 10 news posts for 7 days, then moves down organically; remains on the site permanently</td>
+            <td>Best first test: permanent placement and dofollow links, in front of the site’s utility-downloader audience</td>
+          </tr>
+          <tr>
+            <td>Giveaway or contest</td>
+            <td>$1,000</td>
+            <td>Non-advertisers provide $1,000 MSRP in prizes; advertising partners provide at least $500 MSRP; TechPowerUp builds the contest page, front-page news, poll badge, and social posts; anonymized stats and questionnaire answers, including country</td>
+            <td>Optional sign-up add-on; review devices could count toward prize value</td>
+          </tr>
+          <tr>
+            <td>Site wallpaper</td>
+            <td>Price on request, depends on season and overall budget</td>
+            <td>2-day exclusive takeover, no rotation, runs on all pages, geo-targeting URLs, guaranteed minimum page views</td>
+            <td>Useful around a launch; no price is listed in the kit</td>
+          </tr>
+          <tr>
+            <td>Tradeshow coverage</td>
+            <td>$2,000</td>
+            <td>30-minute booth visit; guaranteed news post during the show; billed NET7, paid before the show starts; content remains indefinitely</td>
+            <td>Only relevant if Rebind is exhibiting</td>
+          </tr>
+          <tr>
+            <td>Product placement in review builds</td>
+            <td>Add-on to an advertising package; no standalone price in the kit</td>
+            <td>Used in every review in that category for the partnership; dedicated test-system page and action shots; the kit says reviews generate over 20 million views a year</td>
+            <td>Add-on only, not a first test</td>
+          </tr>
+          <tr>
+            <td>Spec database API access</td>
+            <td>Price on request</td>
+            <td>Annual access, auto-renews unless cancelled 30 days prior; priority support and REST API customization</td>
+            <td>Not a marketing placement</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <section id="cpm">
+      <h3>Banner CPM matrix</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Monthly budget</th>
+              <th class="num">3 months</th>
+              <th class="num">6 months</th>
+              <th class="num">12 months</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>$1,000</td><td class="num">$3</td><td class="num">$2.50</td><td class="num">$2</td></tr>
+            <tr><td>$1,500</td><td class="num">$2.75</td><td class="num">$2.25</td><td class="num">$1.75</td></tr>
+            <tr><td>$2,000</td><td class="num">$2.50</td><td class="num">$2</td><td class="num">$1.50</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Pricing is for global, organic traffic and for 728×90 and/or 300×250 banners. Any Q4 exposure adds a 25% premium to those CPMs, waived for packages of 12 months or longer. Billing is quarterly, NET30.</p>
+    </section>
+  </section>
+
+  <section id="calculator">
+    <h2>Banner calculator</h2>
+    <p>Estimated monthly impressions use the kit CPM for the selected budget and term. The Q4 premium is waived on packages of 12 months or longer. Impression counts are calculated from the matrix, not a guarantee in the kit.</p>
+    <p class="formula">estimated monthly impressions = (monthly budget ÷ CPM) × 1,000</p>
+    <div class="calc">
+      <div class="controls">
+        <label class="field" for="budget">Monthly budget
+          <select id="budget">
+            <option value="1000" selected>$1,000</option>
+            <option value="1500">$1,500</option>
+            <option value="2000">$2,000</option>
+          </select>
+        </label>
+        <div>
+          <div class="field" id="term-label">Term</div>
+          <div class="seg" role="group" aria-labelledby="term-label">
+            <button type="button" data-term="3" aria-pressed="true">3 months</button>
+            <button type="button" data-term="6" aria-pressed="false">6 months</button>
+            <button type="button" data-term="12" aria-pressed="false">12 months</button>
+          </div>
+        </div>
+        <label class="toggle"><input type="checkbox" id="q4"> Q4 premium, +25%</label>
+      </div>
+      <div class="results">
+        <div class="result"><div class="k">CPM</div><div class="v" id="cpm-out">$3</div></div>
+        <div class="result"><div class="k">Estimated monthly impressions</div><div class="v" id="imp-out">333,333</div></div>
+        <div class="result"><div class="k">Q4 premium</div><div class="v" id="q4-out">Off</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="recommendation">
+    <h2>Recommendation for Rebind</h2>
+    <p class="flag">Book a sponsored news post at $1,000 before banners or a giveaway. It stays on the site permanently, allows dofollow links, and sits in front of the same Windows utility-downloader audience that uses the site’s software archive.</p>
+    <ol>
+      <li>A giveaway at $1,000 is an optional sign-up add-on if a prize pool is available.</li>
+      <li>Banners at these CPMs are cheap reach, but a weaker fit than a news post.</li>
+      <li>If the news post is booked around Black Friday, Cyber Monday, Boxing Day, or Prime Day, the kit price is $1,500.</li>
+    </ol>
+  </section>
+
+  <section id="claims">
+    <h2>Claim limits</h2>
+    <p>Any placement copy written from this kit still has to stay inside Rebind’s claim limits.</p>
+    <ul>
+      <li>Platforms are Windows 10/11 64-bit and macOS 13+ on Apple Silicon.</li>
+      <li>No anti-cheat claims, and no ban or “no ban” claims.</li>
+    </ul>
+  </section>
+
+  <p class="source">Source: TechPowerUp media kit, pub26. SimilarWeb global ranks in the kit are dated January 2026. This public copy omits the advertising contact listed in the kit.</p>
+  <p class="back"><a href="index.html">Back to HTML shares</a></p>
+</main>
+<script>
+(function () {
+  var CPM = {
+    "1000": { "3": 3, "6": 2.5, "12": 2 },
+    "1500": { "3": 2.75, "6": 2.25, "12": 1.75 },
+    "2000": { "3": 2.5, "6": 2, "12": 1.5 }
+  };
+  var budgetEl = document.getElementById("budget");
+  var q4El = document.getElementById("q4");
+  var termButtons = document.querySelectorAll("[data-term]");
+  var term = "3";
+
+  function formatCpm(value) {
+    return value % 1 === 0 ? "$" + value : "$" + value.toFixed(2);
+  }
+  function formatImpressions(value) {
+    return Math.round(value).toLocaleString("en-US");
+  }
+  function render() {
+    var budget = budgetEl.value;
+    var base = CPM[budget][term];
+    var premiumApplies = q4El.checked && term !== "12";
+    var cpm = premiumApplies ? base * 1.25 : base;
+    var impressions = (Number(budget) / cpm) * 1000;
+    var premiumLabel = "Off";
+    if (premiumApplies) premiumLabel = "Applied, +25%";
+    else if (q4El.checked && term === "12") premiumLabel = "Waived on 12-month packages";
+    document.getElementById("cpm-out").textContent = formatCpm(cpm);
+    document.getElementById("imp-out").textContent = formatImpressions(impressions);
+    document.getElementById("q4-out").textContent = premiumLabel;
+  }
+  termButtons.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      term = btn.getAttribute("data-term");
+      termButtons.forEach(function (other) {
+        other.setAttribute("aria-pressed", other === btn ? "true" : "false");
+      });
+      render();
+    });
+  });
+  budgetEl.addEventListener("change", render);
+  q4El.addEventListener("change", render);
+  render();
+})();
+</script>
+</body>
+</html>
